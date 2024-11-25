@@ -1,0 +1,47 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 120px;
+}
+.nav-logo{
+    font-family: Micro 5;
+    font-size: 32px;
+    font-weight: 500;
+}
+.navmenu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    gap: 90px;
+}
+.navmenu img{
+    display: none;
+}
+.navmenu li {
+    text-decoration: none; 
+    color: inherit;        
+}
+.navmenu a {
+    text-decoration: none; 
+    color: inherit;        
+    cursor: pointer;       
+}
+.section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+    padding-top: 40px;
+}
+
+.body-left img{
+    max-width: 320px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+/*------- media query -----*/
