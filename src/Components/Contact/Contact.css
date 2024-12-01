@@ -90,7 +90,7 @@
   
     .contact-submit,
     .contact-clear {
-      padding: 10px 25px;
+      justify-content: space-between;
       font-size: 14px;
     }
   
@@ -142,7 +142,6 @@
     .contact-submit,
     .contact-clear {
       font-size: 12px;
-      padding: 8px 20px;
     }
   
     .contact-left a {
