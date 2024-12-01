@@ -27,10 +27,12 @@
   
   .contact-submit,
   .contact-clear {
-    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
     font-size: 16px;
     cursor: pointer;
     border: none;
+    gap: 30px;
     background-color: #4caf50;
     color: white;
     border-radius: 5px;
