@@ -1,0 +1,120 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.about-section{
+    display: flex;
+    gap: 80px;
+}
+img{
+    max-width: 320px;
+    border-radius: 50px;
+}
+.about-t{
+    position: relative;
+}
+.about-right{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.about-right p{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.about-skill{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about-skills{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    transition: 0.3s;
+}
+.about-skills p{
+    min-width: 150px;
+    font-size: 20px;
+    font-weight: 400;
+}
+/* Media query for mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .about {
+        margin: 50px 20px;  /* Reduce margin for better fitting */
+        gap: 50px;  /* Adjust the gap between elements */
+    }
+
+    .about-section {
+        flex-direction: column;  /* Stack the content vertically */
+        align-items: center;
+    }
+
+    img {
+        max-width: 250px;  /* Reduce image size */
+        margin-bottom: 20px;  /* Add spacing below the image */
+    }
+
+    .about-right {
+        gap: 40px;  /* Reduce gap between elements in the right section */
+        text-align: center;  /* Center-align the content */
+    }
+
+    .about-skill {
+        gap: 10px;  /* Adjust gap between skills */
+    }
+
+    .about-skills {
+        gap: 30px;  /* Reduce gap between skill icons */
+        flex-direction: column;  /* Stack skill icons vertically */
+        align-items: center;  /* Center-align icons */
+    }
+
+    .about-skills p {
+        font-size: 16px;  /* Reduce font size for smaller screens */
+        min-width: auto;  /* Remove the min-width for flexibility */
+    }
+}
+
+/* Extra small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .about {
+        margin: 30px 15px;  /* Further reduce margins */
+        gap: 30px;  /* Decrease gap for very small screens */
+    }
+
+    img {
+        max-width: 200px;  /* Reduce image size even more for smaller screens */
+    }
+
+    .about-right {
+        gap: 20px;  /* Reduce gap between elements */
+    }
+
+    .about-right p {
+        font-size: 14px;  /* Smaller font size */
+    }
+
+    .about-skill {
+        gap: 5px;  /* Tighten the gap between skills */
+    }
+
+    .about-skills {
+        gap: 20px;  /* Reduce gap between skill icons */
+    }
+
+    .about-skills p {
+        font-size: 14px;  /* Reduce font size for skills */
+    }
+
+    hr {
+        width: 50%;  /* Make horizontal rule smaller */
+    }
+}

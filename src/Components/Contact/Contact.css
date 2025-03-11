@@ -1,0 +1,173 @@
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
+
+.contact-sect{
+  display: flex;
+  gap: 150px;
+}
+
+.contact-t{
+  position: relative;
+}
+
+.contact-right{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+}
+
+/* Buttons styling */
+.contact-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* Center the buttons on the same line */
+  gap: 20px;  /* Space between buttons */
+}
+
+.contact-submit,
+.contact-clear {
+  display: flex;  /* Ensure buttons are treated as flex items */
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;  /* Adjust padding for buttons */
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact-submit:hover,
+.contact-clear:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.contact-right input{
+  border: none;
+  width: 300px;
+  height: 30px;
+  padding-left: 20px;
+  border-radius: 4px;
+}
+
+.contact-right textarea{
+  width: 300px;
+  border: none;
+  padding: 25px;
+  border-radius: 4px;
+}
+
+.contact-submit:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact{
+    margin: 50px 20px;  /* Reduce margin for better fitting */
+    gap: 50px;  /* Adjust the gap between elements */
+  }  
+
+  .contact-sect {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-left {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .contact-right {
+    padding-left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-right label {
+    font-size: 16px;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 14px;
+  }
+
+  .contact-submit,
+  .contact-clear {
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  .contact-buttons {
+    display: flex;
+    flex-direction: row;  /* Ensure buttons stay on the same line */
+    align-items: center;
+    gap: 10px;  /* Space between buttons */
+  }
+
+  .contact-detail {
+    font-size: 14px;
+  }
+
+  .contact-left img {
+    width: 35px;
+    height: 35px;
+    margin: 10px 5px;
+  }
+
+  .contact-t h1 {
+    font-size: 28px;
+  }
+
+  /* Adjust the icons in contact-left for mobile */
+  .contact-left a {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact{
+    margin: 30px 15px;  /* Further reduce margins */
+    gap: 30px;  /* Decrease gap for very small screens */
+  }
+
+  .contact-t h1 {
+    font-size: 24px;
+  }
+
+  .contact-detail h2 {
+    font-size: 16px;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 13px;
+  }
+
+  .contact-submit,
+  .contact-clear {
+    font-size: 12px;
+  }
+
+  .contact-left a {
+    margin-right: 8px;
+  }
+
+  .contact-right button {
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+}

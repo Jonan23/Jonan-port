@@ -1,0 +1,61 @@
+/* Apply a futuristic black gradient background */
+body {
+    background: #000; /* Base dark background */
+    font-family: "Orbitron", sans-serif;
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Floating Blurry Gradient Blobs */
+.blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 80, 0, 0.6) 10%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: floatBlobs 6s infinite ease-in-out alternate;
+    z-index: -1;
+}
+
+/* Different Colors for Multiple Blobs */
+.blob:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    background: radial-gradient(circle, rgba(255, 50, 50, 0.7), rgba(0, 0, 0, 0));
+}
+
+.blob:nth-child(2) {
+    top: 50%;
+    left: 60%;
+    background: radial-gradient(circle, rgba(80, 50, 255, 0.7), rgba(0, 0, 0, 0));
+}
+
+.blob:nth-child(3) {
+    top: 80%;
+    left: 20%;
+    background: radial-gradient(circle, rgba(255, 150, 0, 0.7), rgba(0, 0, 0, 0));
+}
+/* Abstract Neon Contour Line Background */
+.neon-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/src/assets/contour-lines.png') no-repeat center;
+    background-size: cover;
+    opacity: 0.4; /* Control visibility */
+    filter: blur(8px) brightness(1.2);
+    mix-blend-mode: screen;
+    z-index: -2;
+}
+
+/* Blob Floating Animation */
+@keyframes floatBlobs {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}
