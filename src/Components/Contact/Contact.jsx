@@ -16,8 +16,7 @@ const Contact = () => {
     if (messageStatus) {
       const timer = setTimeout(() => {
         setMessageStatus('');
-      }, 5000);
-
+      }, 1000);
       return () => clearTimeout(timer);
     }
   }, [messageStatus]);
@@ -28,6 +27,12 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // Basic email validation
+    if (!/\S+@\S+\.\S+/.test(form.email)) {
+      setMessageStatus('Invalid email format. Please enter a valid email.');
+      return;
+    }
 
     const formData = {
       ...form,
@@ -42,12 +47,13 @@ const Contact = () => {
       });
 
       const result = await response.json();
+      console.log(result); // Debugging API response
 
       if (result.success) {
         setMessageStatus('Your message has been sent successfully!');
         setForm(initialFormState);
       } else {
-        setMessageStatus('Failed to send the message, please try again.');
+        setMessageStatus(result.message || 'Failed to send the message, please try again.');
       }
     } catch (error) {
       console.error('Error:', error);
@@ -101,6 +107,8 @@ const Contact = () => {
             value={form.email}
             onChange={handleChange}
             required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            title="Please enter a valid email address"
           />
 
           <label>Message</label>
