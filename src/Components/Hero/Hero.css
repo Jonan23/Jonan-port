@@ -5,7 +5,7 @@
   padding: 12px 24px;
   background: rgba(0, 0, 0, 0.85); /* Slightly darker background for better contrast */
   backdrop-filter: blur(8px); /* Enhanced glass effect */
-  box-shadow: 0 6px 14px rgba(255, 255, 255, 0.15); /* Stronger glow effect */
+
 }
 
 .nav-logo {
@@ -59,7 +59,7 @@
   max-width: 350px; /* Increased image size */
   border-radius: 80px; /* More rounded for a soft look */
   text-align: center;
-  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3); /* Stronger glow effect */
+  
 }
 
 .body-right h1 {
