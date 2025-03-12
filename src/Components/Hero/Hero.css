@@ -5,7 +5,6 @@
   padding: 12px 24px;
   background: rgba(0, 0, 0, 0.85); /* Slightly darker background for better contrast */
   backdrop-filter: blur(8px); /* Enhanced glass effect */
-
 }
 
 .nav-logo {

@@ -37,18 +37,6 @@ body {
     left: 20%;
     background: radial-gradient(circle, rgba(255, 150, 0, 0.7), rgba(0, 0, 0, 0));
 }
-/* Abstract Neon Contour Line Background */
-.neon-lines {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('/src/assets/contour-lines.png') no-repeat center;
-    background-size: cover;
-    opacity: 0.4; /* Control visibility */
-    filter: blur(8px) brightness(1.2);
-    mix-blend-mode: screen;
-    z-index: -2;
-}
 
 /* Blob Floating Animation */
 @keyframes floatBlobs {

@@ -16,7 +16,7 @@ const Contact = () => {
     if (messageStatus) {
       const timer = setTimeout(() => {
         setMessageStatus('');
-      }, 1000);
+      }, 5000); // Increased timeout for better UX
       return () => clearTimeout(timer);
     }
   }, [messageStatus]);
@@ -28,7 +28,7 @@ const Contact = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Basic email validation
+    // Validate email format
     if (!/\S+@\S+\.\S+/.test(form.email)) {
       setMessageStatus('Invalid email format. Please enter a valid email.');
       return;
@@ -36,11 +36,12 @@ const Contact = () => {
 
     const formData = {
       ...form,
-      access_key: 'd872f3cd-19d7-4214-98f7-85cb469e6a94',
+      access_key: process.env.REACT_APP_WEB3FORMS_ACCESS_KEY, // Use environment variable
     };
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      // Use a backend proxy instead of calling Web3Forms directly (fix CSP issue)
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
